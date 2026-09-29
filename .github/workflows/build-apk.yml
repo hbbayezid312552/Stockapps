@@ -5,23 +5,22 @@ on:
   push:
     branches:
       - main
-      - master
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version: 24
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: 21
@@ -29,13 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Install Capacitor
+        run: |
+          npm install @capacitor/core @capacitor/cli @capacitor/android
+
       - name: Build web app
         run: npm run build
 
-      - name: Install Capacitor Android
-        run: npm install @capacitor/android
-
-      - name: Add Android
+      - name: Add Android platform
         run: npx cap add android
 
       - name: Sync Android
@@ -43,10 +43,13 @@ jobs:
 
       - name: Build APK
         working-directory: android
-        run: chmod +x gradlew && ./gradlew assembleDebug
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Probhati-ERP-Android-APK
           path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
