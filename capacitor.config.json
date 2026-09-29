@@ -1,0 +1,13 @@
+{
+  "appId": "com.probhati.erp",
+  "appName": "Probhati ERP",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#064e3b",
+    "allowMixedContent": true
+  }
+}

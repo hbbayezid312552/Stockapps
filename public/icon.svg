@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f5132"/>
+      <stop offset="100%" stop-color="#064024"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  <!-- Sun Rays & Wheat Arc -->
+  <circle cx="256" cy="230" r="110" fill="none" stroke="url(#gold)" stroke-width="12" stroke-dasharray="8 14" opacity="0.6"/>
+  <!-- Rising Sun Motif -->
+  <circle cx="256" cy="220" r="64" fill="url(#gold)"/>
+  <!-- Oil Drop / Grain Motif -->
+  <path d="M 256 120 C 256 120 180 230 180 290 A 76 76 0 0 0 332 290 C 332 230 256 120 256 120 Z" fill="white" opacity="0.95"/>
+  <path d="M 256 150 C 256 150 196 238 196 288 A 60 60 0 0 0 316 288 C 316 238 256 150 256 150 Z" fill="url(#gold)"/>
+  <!-- Letter P -->
+  <text x="256" y="420" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="76" fill="#FDE68A" text-anchor="middle" letter-spacing="4">PROBHATI</text>
+  <text x="256" y="454" font-family="'Plus Jakarta Sans', sans-serif" font-weight="600" font-size="24" fill="#A7F3D0" text-anchor="middle" letter-spacing="8">FOOD PRODUCTS</text>
+</svg>

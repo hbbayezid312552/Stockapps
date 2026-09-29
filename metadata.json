@@ -1,0 +1,6 @@
+{
+  "name": "Probhati ERP - Invoice, Sales, Stock & S.R Management",
+  "description": "Enterprise FMCG Invoice, Dealer & SR Sales Management, Carton/Piece Inventory Tracking, and Offline Android Ready ERP System.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
